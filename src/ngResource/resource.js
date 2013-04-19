@@ -16,23 +16,22 @@
  * [RESTful](http://en.wikipedia.org/wiki/Representational_State_Transfer) server-side data sources.
  *
  * The returned resource object has action methods which provide high-level behaviors without
- * the need to interact with the low level {@link ng.$http $http} service.
+ * the need to interact with the low-level {@link ng.$http $http} service.
  *
  * # Installation
- * To use $resource make sure you have included the `angular-resource.js` that comes in Angular 
- * package. You can also find this file on Google CDN, bower as well as at
+ * To use $resource make sure you have included the `angular-resource.js` script, which comes bundled with Angular.
+ * You can also find this file on the Google CDN, [bower](http://twitter.github.io/bower), and at
  * {@link http://code.angularjs.org/ code.angularjs.org}.
  *
- * Finally load the module in your application:
+ * Finally, load the module in your application:
  *
  *        angular.module('app', ['ngResource']);
  *
  * and you are ready to get started!
  *
- * @param {string} url A parametrized URL template with parameters prefixed by `:` as in
- *   `/user/:username`. If you are using a URL with a port number (e.g.
- *   `http://example.com:8080/api`), you'll need to escape the colon character before the port
- *   number, like this: `$resource('http://example.com\\:8080/api')`.
+ * @param {string} url A URL template with parameters prefixed by `:` as in
+ *   `/user/:username`. Port numbers in URLs (e.g.
+ *   `http://example.com:8080/api`), must be escaped with a double backslash: `$resource('http://example.com\\:8080/api')`.
  *
  * @param {Object=} paramDefaults Default values for `url` parameters. These can be overridden in
  *   `actions` methods. If any of the parameter value is a function, it will be executed every time
